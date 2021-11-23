@@ -1,23 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Personalizar tema de la consola
 
-using System.Net;
-
-WebClient Client = new WebClient();
-string ConfigFileUrl = "https://drive.google.com/uc?id=1D9d3ZGLcrOYb7_z9-UiZ95MbIXiE3z42&export=download";
-
-async Task<string> DownloadData(string URL)
-{
-    Client.DownloadProgressChanged+= DownloadProgressChanged;
-    byte[] DownloadedData = await Client.DownloadDataTaskAsync(URL);
-
-    return System.Text.Encoding.UTF8.GetString(DownloadedData);
-}
-
-void DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
-{
-    Console.WriteLine(e.ProgressPercentage);
-}
+using GDNative_Project_Creator;
 
 Console.BackgroundColor = ConsoleColor.Gray;
 Console.Clear();
@@ -32,4 +16,6 @@ Console.Write('\n');
 Console.WriteLine("Presiona cualquier tecla para continuar...");
 Console.ReadKey();
 
-await DownloadData(ConfigFileUrl);
+//Obtener archivo de configuración
+DataAndFilesDownloader downloader = new DataAndFilesDownloader("https://drive.google.com/u/0/uc?id=1D9d3ZGLcrOYb7_z9-UiZ95MbIXiE3z42&export=download", "Lista de versiones");
+Console.WriteLine(await downloader.DownloadString());
