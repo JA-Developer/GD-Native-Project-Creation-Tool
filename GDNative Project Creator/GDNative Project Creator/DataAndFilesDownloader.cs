@@ -19,23 +19,26 @@ namespace GDNative_Project_Creator
             Name = name;
         }
 
-        public async Task<string> DownloadString()
+        public string DownloadString()
         {
             Console.Clear();
-            Console.WriteLine("Iniciando descarga...");
+            Console.WriteLine($"Iniciando descarga de: {Name}...");
 
             Client.DownloadProgressChanged += DownloadProgressChanged;
-            Client.DownloadDataCompleted += Client_DownloadDataCompleted; ;
 
-
-            byte[] DownloadedData = await Client.DownloadDataTaskAsync(Url);
+            byte[] DownloadedData = Client.DownloadData(Url);
 
             return System.Text.Encoding.UTF8.GetString(DownloadedData);
         }
 
-        private void Client_DownloadDataCompleted(object sender, DownloadDataCompletedEventArgs e)
+        public void DownloadFile(string Path)
         {
             Console.Clear();
+            Console.WriteLine($"Iniciando descarga de: {Name}...");
+
+            Client.DownloadProgressChanged += DownloadProgressChanged;
+
+            Client.DownloadFile(Url, Path);
         }
 
         void DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)

@@ -28,3 +28,5 @@ C:\Users\JASP\Documents\GitHub\GD-Native-Project-Creation-Tool\GDNative Project 
 C:\Users\JASP\Documents\GitHub\GD-Native-Project-Creation-Tool\GDNative Project Creator\GDNative Project Creator\obj\Debug\net6.0\ref\GDNative Project Creator.dll
 C:\Users\JASP\Documents\GitHub\GD-Native-Project-Creation-Tool\GDNative Project Creator\GDNative Project Creator\obj\Debug\net6.0\GDNative Project Creator.pdb
 C:\Users\JASP\Documents\GitHub\GD-Native-Project-Creation-Tool\GDNative Project Creator\GDNative Project Creator\obj\Debug\net6.0\GDNative Project Creator.genruntimeconfig.cache
+C:\Users\JASP\Documents\GitHub\GD-Native-Project-Creation-Tool\GDNative Project Creator\GDNative Project Creator\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\JASP\Documents\GitHub\GD-Native-Project-Creation-Tool\GDNative Project Creator\GDNative Project Creator\obj\Debug\net6.0\GDNative Project Creator.csproj.CopyComplete

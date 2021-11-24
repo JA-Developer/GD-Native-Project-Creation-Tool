@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7mLomyYKiOB0insQ8KIl4Gpa5JZkm6wfNL+2vAong8ZToP0CMrwoibBEBQABZJIeQ2E7p4pQZ6BPD0/BlHw1bg==",
+  "dgSpecHash": "dNw40Zctby4hGzzs6JiZIcwnYm+AzatsQlzJu/VCbpPuNj2E1Hicj7MSM6XN1cIh+U3YK/jKUDDH0zq33SeOWg==",
   "success": true,
   "projectFilePath": "C:\\Users\\JASP\\Documents\\GitHub\\GD-Native-Project-Creation-Tool\\GDNative Project Creator\\GDNative Project Creator\\GDNative Project Creator.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\JASP\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

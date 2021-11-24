@@ -1,7 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
-//Personalizar tema de la consola
 
 using GDNative_Project_Creator;
+using Newtonsoft.Json;
+
+//Variable que se debe activar para cerrar el programa
+
+bool Finalizar = false;
+
+//Personalizar tema de la consola
 
 Console.BackgroundColor = ConsoleColor.Gray;
 Console.Clear();
@@ -16,6 +22,30 @@ Console.Write('\n');
 Console.WriteLine("Presiona cualquier tecla para continuar...");
 Console.ReadKey();
 
-//Obtener archivo de configuración
-DataAndFilesDownloader downloader = new DataAndFilesDownloader("https://drive.google.com/u/0/uc?id=1D9d3ZGLcrOYb7_z9-UiZ95MbIXiE3z42&export=download", "Lista de versiones");
-Console.WriteLine(await downloader.DownloadString());
+while(!Finalizar)
+{
+    Console.Clear();
+
+    Console.WriteLine("Seleccione una opción:\n");
+    Console.WriteLine("1. Nuevo proyecto");
+    Console.WriteLine("2. Salir");
+    Console.Write("\nIngrese su respuesta: ");
+
+    var RespuestaStr = Console.ReadLine();
+    int result = 0;
+
+    if (int.TryParse(RespuestaStr, out result))
+    {
+        switch (result)
+        {
+            case 1:
+                OpcionesMenu.NuevoProyecto();
+                break;
+            case 2:
+                Finalizar = true;
+                break;
+            default:
+                break;
+        }
+    }
+}
